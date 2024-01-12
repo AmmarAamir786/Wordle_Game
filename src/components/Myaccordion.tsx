@@ -3,8 +3,10 @@
 import * as Accordion from "@radix-ui/react-accordion";
 import AccordionTemplate from "@/components/AccordionTemplate";
 
-export default () => (
-  <Accordion.Root type="single" collapsible>
+
+const Myaccordion = () => {
+  return (
+    <Accordion.Root type="single" collapsible>
     <AccordionTemplate
       item="item-1"
       trigger="How to play this game?"
@@ -35,4 +37,7 @@ export default () => (
       content="Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive."
     ></AccordionTemplate>
   </Accordion.Root>
-);
+  )
+}
+
+export default Myaccordion
