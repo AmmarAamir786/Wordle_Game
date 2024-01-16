@@ -47,8 +47,8 @@ const Myheader = () => {
             ></Image>
           </Link>
           <div className="justify-center items-center hidden sm:flex lg:gap-4 gap-[19px]">
-            <Mybutton text="New Game" style="hidden sm:flex"></Mybutton>
-            <Mybutton text="Login" style="w-[68px] hidden sm:flex"></Mybutton>
+            <Mybutton text="New Game" style="hidden sm:flex" link="/"></Mybutton>
+            <Mybutton text="Login" style="w-[68px] hidden sm:flex" link="/"></Mybutton>
           </div>
 
           <div className="flex justify-center items-center sm:hidden">
@@ -92,8 +92,8 @@ const Myheader = () => {
                     clip-rule="evenodd"
                   />
                 </svg>
-                <Mybutton text="New Game"></Mybutton>
-                <Mybutton text="Login" style="w-[68px]"></Mybutton>
+                <Mybutton text="New Game" link="/"></Mybutton>
+                <Mybutton text="Login" style="w-[68px]" link="/"></Mybutton>
                 <div className="w-full mx-auto h-px border border-black border-opacity-10"></div>
               </div>
             </MobNav>

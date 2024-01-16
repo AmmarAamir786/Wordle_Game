@@ -58,7 +58,6 @@ export default function Home() {
         <Yourscore></Yourscore>
 
         {/* Leaderboard */}
-
         <div id="leaderboard" className="lg:mt-[67px] mt-[50px] flex flex-col justify-center items-center gap-[15px]">
 
           <div className="lg:w-[948px] w-[335px] h-[67px] lg:h-[85px] flex flex-col justify-center items-center gap-3">
@@ -75,7 +74,7 @@ export default function Home() {
           </div>
 
           <div className="lg:mt-[45px] mt-[9px] lg:mb-[75px] mb-[44px]">
-            <Mybutton text="View More" textStyle="lg:text-base text-[15px] font-bold" style="flex items-center lg:h-[50px] lg:w-[155px] w-[155px] h-[50px]"></Mybutton>
+            <Mybutton text="View More" textStyle="lg:text-base text-[15px] font-bold" style="flex items-center lg:h-[50px] lg:w-[155px] w-[155px] h-[50px]" link="/"></Mybutton>
           </div>
 
         </div>
