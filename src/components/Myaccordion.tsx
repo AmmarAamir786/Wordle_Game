@@ -6,7 +6,7 @@ import AccordionTemplate from "@/components/AccordionTemplate";
 
 const Myaccordion = () => {
   return (
-    <Accordion.Root type="single" collapsible>
+  <Accordion.Root type="single" collapsible>
     <AccordionTemplate
       item="item-1"
       trigger="How to play this game?"

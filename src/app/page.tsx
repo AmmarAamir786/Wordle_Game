@@ -13,6 +13,7 @@ import Strat from "@/components/Strat";
 import Myfooter from "@/components/Myfooter";
 import Myaccordion from "@/components/Myaccordion";
 import bgimage from "@/assets/bgimage.svg"
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -20,8 +21,10 @@ export default function Home() {
       
       <Myheader></Myheader>
 
+      {/* Main section */}
       <section className="flex flex-col justify-center items-center bg-neutral-50 relative">
 
+        {/* bg images */}
         <Image src={bgimage} alt="bgimage" className="absolute top-0"></Image>
 
         <div className="w-[605px] h-[605px] opacity-50 bg-WarmCoral-1 rounded-full blur-[302px] absolute -left-[221px] -top-[155px]" />
@@ -29,13 +32,19 @@ export default function Home() {
         <div className="w-[605px] h-[605px] opacity-70 bg-SoftBlue-3 rounded-full blur-[302px] absolute top-[262px] right-0" />
 
         {/* Welcome */}
-        <div className=" flex-col justify-start items-center gap-2 inline-flex lg:mt-[42px] mt-[24px] lg:w-[894px] w-[335px] text-center z-20">
-          <div className="w-[486px] text-center lg:text-[38px] text-[26px] font-bold leading-10 text-text-1">Welcome!</div>
-          <div className="lg-w-[894px] lg:text-[16px] text-[14px] font-normal leading-7">Go to this step by step guideline process on how to certify for your weekly benefits: <span className="text-cta-1 lg:text-[16px] text-[14px] font-semibold underline leading-7">See our guideline</span></div>
+        <div className=" flex-col justify-start items-center gap-2 inline-flex lg:mt-[42px] mt-[24px] lg:w-[894px] w-[335px] text-center z-10">
+          <div className="lg:w-[486px] text-center lg:text-[38px] text-[26px] font-bold leading-10 text-text-1">Welcome!</div>
+          <div className="lg-w-[894px] lg:text-[16px] text-[14px] font-normal leading-7">Go to this step by step guideline process on how to certify for your weekly benefits: 
+            <Link href={"/"}>
+              <span className="text-cta-1 lg:text-[16px] text-[14px] font-semibold underline leading-7">
+                See our guideline
+              </span>
+            </Link>
+          </div>
         </div>
 
         {/* Clock */}
-        <div className="h-8 px-5 py-2.5 bg-soft-blue rounded-[90px] justify-center items-center gap-[5px] inline-flex text-slate-50 text-base font-semibold lg:mt-[25px] lg:mb-[25px] mt-[14px] mb-[22px] z-20">
+        <div className="h-8 px-5 py-2.5 bg-soft-blue rounded-[90px] justify-center items-center gap-[5px] inline-flex text-slate-50 text-base font-semibold lg:mt-[25px] lg:mb-[25px] mt-[14px] mb-[22px] z-10">
           <div>00</div>
           <div>:</div>
           <div>10</div>
@@ -50,7 +59,7 @@ export default function Home() {
 
         {/* Leaderboard */}
 
-        <div className="lg:mt-[67px] mt-[50px] flex flex-col justify-center items-center gap-[15px]">
+        <div id="leaderboard" className="lg:mt-[67px] mt-[50px] flex flex-col justify-center items-center gap-[15px]">
 
           <div className="lg:w-[948px] w-[335px] h-[67px] lg:h-[85px] flex flex-col justify-center items-center gap-3">
             <div className="lg:w-96 w-[256px] text-center text-WarmCoral-4 lg:text-[26px] text-[15px] font-bold leading-snug">Leaderboard</div>
@@ -76,7 +85,8 @@ export default function Home() {
 
       </section>
 
-      <section className="lg:h-[382px] h-[437px] bg-orange-100 flex justify-center items-center">
+      {/* Guess the hidden word */}
+      <section id="howtoplay" className="lg:h-[382px] h-[437px] bg-orange-100 flex justify-center items-center">
         <div className="flex flex-col justify-center items-center gap-3">
           <div className="lg:w-[486px] w-[256px] text-center text-WarmCoral-4 lg:text-[26px] text-[15px] font-bold leading-snug">Wordle Game</div>
           <div className="lg:w-[486px] w-[256px] text-center lg:text-[40px] text-[26px] font-bold text-text-1 leading-10">Guess the Hidden Word</div>
@@ -84,6 +94,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* How to play */}
       <section className="lg:h-[1185px] h-[1440px] bg-white shadow relative">
         <Image src={tl} alt="tl" className="absolute left-0 top-0 lg:h-[116px] lg:w-[116px] w-[56px] h-[56px]"></Image>
         <Image src={tr} alt="tr" className="absolute right-0 top-0 lg:h-[116px] lg:w-[116px] w-[56px] h-[56px]"></Image>
@@ -123,13 +134,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Acoordion */}
       <section>
-
         <div className="flex flex-col justify-center items-center lg:mt-[100px] mt-[40px] lg:gap-[37px] gap-[22px] lg:mb-[96px] mb-[40px]">
           <div className="lg:w-[578px] w-[355px] text-center text-text-1 lg:text-[38px] text-[26px] font-bold leading-10">FAQs</div>
           <Myaccordion></Myaccordion>
         </div>
-
       </section>
 
       <Myfooter></Myfooter>
